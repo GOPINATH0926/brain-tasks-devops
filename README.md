@@ -397,6 +397,18 @@ https://github.com/GOPINATH0926/brain-tasks-devops
 
 ---
 
+# Live Application URL
+
+The application is successfully deployed on AWS EKS using Kubernetes LoadBalancer.
+
+```text
+http://a65f61c4fd7374b67bb395ccb3ca4ffc-18292735.us-east-1.elb.amazonaws.com
+```
+
+You can access the Brain Tasks application using the above URL.
+
+---
+
 # Author
 
 Gopinath
