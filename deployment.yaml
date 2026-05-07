@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: brain-tasks
-        image: YOUR_DOCKERHUB_USERNAME/brain-tasks-app:latest
+        image: gopinathsiva2605/brain-tasks-app:latest
         ports:
         - containerPort: 80
