@@ -1,92 +1,58 @@
-DevOps Practice Project – Dist Directory
+# Brain Tasks App - DevOps Deployment Project
 
-This repository contains the production-ready build files (dist folder) for DevOps practice and deployment exercises.
+## Project Overview
 
-It is intentionally structured to help learners focus on CI/CD pipelines, hosting, containerization, and infrastructure setup rather than application development.
+This project demonstrates a complete DevOps deployment workflow for a React static application using:
 
-📁 What This Repository Contains
+- Docker
+- DockerHub
+- Kubernetes
+- AWS EKS
+- AWS CodeBuild
+- AWS CodePipeline
+- CloudWatch
 
-dist/ – Compiled and production-ready static files
+The application was provided as a production-ready `dist/` folder.
 
-HTML
+---
 
-CSS
+# Application Architecture
 
-JavaScript
+GitHub Repo
+↓
+CodePipeline
+↓
+CodeBuild
+↓
+DockerHub
+↓
+AWS EKS Cluster
+↓
+Kubernetes Deployment + Service
+↓
+AWS LoadBalancer
+↓
+Application Access
 
-Assets (images, fonts, etc.)
+---
 
-These files are ready to deploy to:
+# Technologies Used
 
-Web servers (Nginx / Apache)
+- Docker
+- DockerHub
+- Kubernetes
+- AWS EKS
+- AWS CodeBuild
+- AWS CodePipeline
+- AWS CloudWatch
+- Nginx
+- EC2 Ubuntu
 
-Cloud platforms (AWS S3, Azure Blob, GCP Storage)
+---
 
-Containerized environments (Docker + Nginx)
+# Docker Setup
 
-Kubernetes clusters
+## Build Docker Image
 
-CI/CD pipeline demonstrations
-
-🎯 Purpose of This Repository
-
-This repository is designed for:
-
-DevOps beginners
-
-CI/CD practice
-
-Deployment pipeline testing
-
-Docker & Kubernetes deployment exercises
-
-Web server configuration practice
-
-Reverse proxy and load balancer setup
-
-The goal is to simulate real-world deployment scenarios using already built application files.
-
-❓ Why is there NO package.json?
-
-You may notice that this repository does not include:
-
-package.json
-
-node_modules
-
-Source code (src/)
-
-Build tools configuration
-
-✅ Reason:
-
-This repository only contains the final production build output (dist), not the development source code.
-
-In a typical project:
-
-Developers write source code.
-
-The project is built using tools like:
-
-Node.js
-
-Webpack
-
-Vite
-
-React (or other frameworks)
-
-A dist/ folder is generated.
-
-Only the production build is deployed to servers.
-
-This repository represents step 4 only.
-
-Since this is already the compiled output:
-
-No dependencies are required
-
-No build process is required
-
-No package.json is needed
-CI/CD working
+```bash
+docker build -t brain-tasks-app .
