@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Docker Hub
+      - echo "Gopi@1234" | docker login -u "gopinathsiva2605" --password-stdin
+
+  build:
+    commands:
+      - echo Building Docker image
+      - docker build -t brain-tasks-app .
+      - docker tag brain-tasks-app gopinathsiva2605/brain-tasks-app:latest
+
+  post_build:
+    commands:
+      - echo Pushing Docker image
+      - docker push gopinathsiva2605/brain-tasks-app:latest
